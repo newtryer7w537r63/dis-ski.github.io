@@ -4,7 +4,7 @@ let zoneFrame = document.getElementById('zoneFrame');
 const searchBar = document.getElementById('searchBar');
 const sortOptions = document.getElementById('sortOptions');
 // https://www.jsdelivr.com/tools/purge
-const zonesURL = "file:///media/fuse/drivefs-36d97db1e257a43a26aa47848a82e3e2/root/games.html";
+const zonesURL = "https://cdn.jsdelivr.net/gh/newtryer7w537r63/dis-ski.github.io@testing/file.json";
 const coverURL = "https://cdn.jsdelivr.net/gh/gn-math/covers@main";
 const htmlURL = "https://cdn.jsdelivr.net/gh/gn-math/html@main";
 let zones = [];
@@ -181,3 +181,4 @@ darkModeToggle.addEventListener('click', () => {
 });
 
 listZones();
+
