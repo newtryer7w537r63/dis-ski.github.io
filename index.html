@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gn-math</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         @keyframes fadeInDown {
             from {
@@ -44,14 +44,17 @@
         }
 
         :root {
-            --primary-color: #00d4ff;
+            --primary-color: #dc2626;
             --secondary-color: #1a1a2e;
-            --accent-color: #ff006e;
+            --accent-color: #d4af37;
+            --accent-warm: #f5deb3;
+            --accent-dark: #8b4513;
+            --accent-rose: #c084fc;
             --bg-dark: #0f0f1e;
             --bg-light: #f8f9fa;
             --text-light: #ffffff;
             --text-dark: #1a1a2e;
-            --shadow: rgba(0, 212, 255, 0.15);
+            --shadow: rgba(220, 38, 38, 0.15);
             --shadow-dark: rgba(0, 0, 0, 0.3);
             --radius: 12px;
             --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -64,8 +67,8 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, var(--bg-dark) 0%, #1a0a2e 100%);
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #1a0f0a 0%, #2d1810 100%);
             color: var(--text-light);
             line-height: 1.6;
             transition: background var(--transition), color var(--transition);
@@ -77,7 +80,8 @@
             text-align: center;
             font-size: 4rem;
             font-weight: 700;
-            background: linear-gradient(90deg, var(--primary-color) 0%, #00a8cc 100%);
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(90deg, #dc2626 0%, #d4af37 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -89,24 +93,25 @@
         h1 + p {
             text-align: center;
             font-size: 1.1em;
-            color: var(--primary-color) !important;
+            color: #d4af37 !important;
             margin: -10px 0 30px 0 !important;
             letter-spacing: 1px;
             font-weight: 300;
             text-transform: uppercase;
             animation: fadeInUp 0.8s ease-out 0.2s both !important;
+            font-family: 'Montserrat', sans-serif;
         }
 
         #searchBar {
             display: block;
             margin: 30px auto;
             padding: 14px 20px;
-            width: 90%;
-            max-width: 600px;
-            border: 2px solid rgba(0, 212, 255, 0.3);
+            width: 95%;
+            max-width: 900px;
+            border: 2px solid rgba(220, 38, 38, 0.3);
             border-radius: var(--radius);
             font-size: 15px;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             background: rgba(26, 26, 46, 0.8);
             color: var(--text-light);
             box-shadow: 0 8px 24px var(--shadow);
@@ -116,8 +121,8 @@
 
         #searchBar:focus {
             outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 8px 32px rgba(0, 212, 255, 0.3);
+            border-color: #dc2626;
+            box-shadow: 0 8px 32px rgba(220, 38, 38, 0.4);
             background: rgba(26, 26, 46, 0.95);
         }
 
@@ -142,21 +147,22 @@
 
         #dataButtons button, #sortOptions {
             padding: 10px 18px;
-            border: 1px solid var(--primary-color);
+            border: 1px solid #dc2626;
             border-radius: 8px;
-            background: rgba(0, 212, 255, 0.1);
-            color: var(--primary-color);
+            background: rgba(220, 38, 38, 0.1);
+            color: #dc2626;
             font-weight: 600;
             cursor: pointer;
             transition: all var(--transition);
-            font-family: 'Poppins', sans-serif;
-            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            letter-spacing: 0.3px;
         }
 
         #dataButtons button:hover, #sortOptions:hover {
-            background: var(--primary-color);
+            background: #dc2626;
             color: var(--bg-dark);
-            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.4);
         }
 
         #container {
@@ -178,14 +184,14 @@
             color: var(--text-light);
             box-shadow: 0 12px 30px var(--shadow-dark);
             transition: all var(--transition);
-            border: 1px solid rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(220, 38, 38, 0.1);
             backdrop-filter: blur(10px);
         }
 
         .zone-item:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
-            border-color: var(--primary-color);
+            box-shadow: 0 20px 40px rgba(220, 38, 38, 0.2);
+            border-color: #dc2626;
         }
 
         .zone-item img {
@@ -205,17 +211,17 @@
             width: 100%;
             padding: 12px;
             border: none;
-            background: linear-gradient(90deg, var(--primary-color), #00a8cc);
+            background: linear-gradient(90deg, #dc2626, #d4af37);
             color: var(--bg-dark);
             font-weight: 700;
             cursor: pointer;
             transition: all var(--transition);
             border-radius: 0 0 var(--radius) var(--radius);
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .zone-item button:hover {
-            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.4);
             transform: scale(1.02);
         }
 
@@ -223,7 +229,7 @@
             text-align: center;
             margin: 20px 0;
             font-size: 1.1em;
-            color: var(--primary-color);
+            color: #d4af37;
             font-weight: 600;
             animation: fadeInUp 0.8s ease-out 0.5s both;
         }
@@ -243,7 +249,7 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
             z-index: 2000;
             overflow: hidden;
-            border: 1px solid rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(220, 38, 38, 0.1);
             backdrop-filter: blur(20px);
         }
 
@@ -263,89 +269,26 @@
             background: rgba(26, 26, 46, 0.95);
             font-size: 16px;
             color: var(--text-light);
-            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+            border-bottom: 1px solid rgba(220, 38, 38, 0.1);
         }
 
         #controls button {
-            padding: 8px 16px;
-            margin-left: 10px;
+            padding: 8px 14px;
+            margin-left: 8px;
             border-radius: 8px;
-            background: linear-gradient(90deg, var(--primary-color), #00a8cc);
+            background: linear-gradient(90deg, #dc2626, #d4af37);
             border: none;
             color: var(--bg-dark);
             cursor: pointer;
             transition: all var(--transition);
             font-weight: 600;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
         }
 
         #controls button:hover {
-            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.4);
             transform: scale(1.05);
-        }
-
-        #darkModeToggle {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            padding: 14px 22px;
-            border-radius: var(--radius);
-            background: linear-gradient(90deg, var(--primary-color), #00a8cc);
-            color: var(--bg-dark);
-            font-weight: 700;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
-            transition: all var(--transition);
-            z-index: 1000;
-            border: none;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        #darkModeToggle:hover {
-            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
-            transform: scale(1.08);
-        }
-
-        /* LIGHT MODE */
-        body.light-mode {
-            background: linear-gradient(135deg, var(--bg-light) 0%, #e8eef5 100%);
-            color: var(--text-dark);
-        }
-
-        body.light-mode h1 {
-            background: linear-gradient(90deg, #0066cc 0%, #0088ff 100%);
-            -webkit-text-fill-color: transparent;
-        }
-
-        body.light-mode #searchBar {
-            background: rgba(255, 255, 255, 0.8);
-            color: var(--text-dark);
-            border-color: rgba(0, 102, 204, 0.3);
-        }
-
-        body.light-mode #searchBar::placeholder {
-            color: rgba(0, 0, 0, 0.4);
-        }
-
-        body.light-mode .zone-item {
-            background: linear-gradient(135deg, #ffffff 0%, #f5f7ff 100%);
-            color: var(--text-dark);
-            border-color: rgba(0, 102, 204, 0.2);
-        }
-
-        body.light-mode #zoneViewer {
-            background: rgba(255, 255, 255, 0.98);
-            border-color: rgba(0, 102, 204, 0.1);
-        }
-
-        body.light-mode #zoneInfo {
-            background: rgba(245, 247, 255, 0.95);
-            color: var(--text-dark);
-            border-color: rgba(0, 102, 204, 0.1);
-        }
-
-        body.light-mode h1 + p {
-            color: #0066cc !important;
         }
 
         @media (max-width: 768px) {
@@ -373,7 +316,7 @@
 <body class="dark-mode">
     <div style="margin-top: 20px; margin-bottom: 20px; animation: fadeInDown 0.8s ease-out;">
         <h1>gn-math</h1>
-        <p style="text-align: center; font-size: 1.1em; color: #00d4ff; margin: -10px 0 20px 0; letter-spacing: 1px; font-weight: 300; animation: fadeInUp 0.8s ease-out 0.2s both;">Weekly updates every monday :)</p>
+        <p style="text-align: center; font-size: 1.1em; color: #d4af37; margin: -10px 0 20px 0; letter-spacing: 1px; font-weight: 300; animation: fadeInUp 0.8s ease-out 0.2s both;">Weekly updates every monday :)</p>
     </div>
     <div style="width:100%; display:flex; justify-content:center; margin-bottom:20px;">
         <iframe src="https://democratmachinesucceed.com/km9dvd7fp?key=51c9dd135146d5d93f5886779fc2b354" style="width:90%; height:90px; border:none;"></iframe>
@@ -398,7 +341,7 @@
     <div id="zoneViewer">
         <div id="zoneInfo">
             <div id="zoneTitle">
-                <span id="zoneName" style="font-weight: 600;"></span> <span id="zoneId" style="color: var(--primary-color);"></span>
+                <span id="zoneName" style="font-weight: 600;"></span> <span id="zoneId" style="color: #dc2626;"></span>
             </div>
             <div id="controls">
                 <button onclick="closeZone()">✕ Close</button>
@@ -408,7 +351,6 @@
         </div>
         <iframe id="zoneFrame"></iframe>
     </div>
-    <button id="darkModeToggle">🌙 Dark Mode</button>
     <script>
         const container = document.getElementById('container');
         const zoneViewer = document.getElementById('zoneViewer');
